@@ -31,8 +31,8 @@ function onImgClick(e) {
     const modal = basicLightbox.create(
         `<img src="${e.target.dataset.source}">`,
 
-        {   onShow: () => window.addEventListener('keydown', onEscKeyPress),
-            onClose: () => window.removeEventListener('keydown', onEscKeyPress),
+        {   onShow: () => document.addEventListener('keydown', onEscKeyPress),
+            onClose: () => document.removeEventListener('keydown', onEscKeyPress),
         }
     );
     
